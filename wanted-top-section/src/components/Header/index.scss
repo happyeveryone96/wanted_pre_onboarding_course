@@ -1,0 +1,72 @@
+.header {
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+  width: 100%;
+  &-main {
+    display: flex;
+      position: relative;
+  right: 30px;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1010px;
+    margin: auto;
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    margin: 4px 3vw;
+  }
+  &-wanted {
+    position: relative;
+    bottom: 1px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 10px;
+  }
+  &-link {
+    display: flex;
+    position: relative;
+    right: 20px;
+    font-weight: 600;
+    justify-content: space-between;
+    width: 450px;
+  }
+  &-right {
+    display: flex;
+    width: 240px;
+    position: relative;
+    left: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-service-button {
+    display: flex;
+    width: 80px;
+    height: 24px;
+    text-decoration: none;
+    color: #666666;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e1e2e3;
+    border-radius: 15px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  width: 70px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 10px;
+  margin: 20px;
+  background-color: lightgray;
+}
+
+.salary {
+  position: relative;
+  right: 8px;
+}

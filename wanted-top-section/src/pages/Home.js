@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../components/Header';
-import Slide from '../components/Slide/Slide';
+import Slide from '../components/Slide';
 
 function Home() {
   return (

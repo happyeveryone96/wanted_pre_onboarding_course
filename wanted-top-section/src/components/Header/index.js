@@ -10,7 +10,8 @@ function Header() {
   const isNone = useMediaQuery("(max-width: 992px)");
   const useStyles = makeStyles((theme) => ({
     avatar: {
-      display:'block'
+      display:'block',
+      cursor: 'pointer'
     },
     avatarNone: {
       display:'none'

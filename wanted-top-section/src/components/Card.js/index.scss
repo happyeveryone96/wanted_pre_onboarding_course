@@ -1,0 +1,52 @@
+.card {
+  width: 1060px;
+  height: 280px;
+  position: relative;
+  top: 23px;
+  margin: 0 12px;
+  &-content {
+    position: absolute;
+    border-radius: 4px;
+    top: 113px;
+    left: 20px;
+    width: 330px;
+    height: 136px;
+    background-color: white;
+    z-index: 1;
+
+  }
+  &-title {
+    width: 100%;
+    margin: 20px 20px 0;
+    font-size: 20px;
+  }
+  &-text {
+    position: relative;
+    font-size: 14px;
+    margin: 4px 20px 20px;
+  }
+  &-divider {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: lightgray;
+    height: 1px;
+  }
+  &-link {
+    width: 330px;
+    margin: 20px;
+    color: #3333FF;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  &-icon {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.slide-img {
+  position: relative;
+  height: 273px;
+}

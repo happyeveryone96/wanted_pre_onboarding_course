@@ -1,31 +1,116 @@
 .slide {
   display: flex;
   position: fixed;
-  margin: 0 auto;
   right: 700px;
   width: 100vw;
+  @media screen and (max-width: 1200px) {
+    margin: 0 16vw;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0 14vw;
+  }
+  @media screen and (min-width: 1230px) {
+    margin: 0 13vw;
+  }
+  @media screen and (min-width: 1290px) {
+    margin: 0 10vw;
+  }
+  @media screen and (min-width: 1300px) {
+    margin: 0 8vw;
+  }
+  @media screen and (min-width: 1400px) {
+    margin: 0 5vw;
+  }
+  @media screen and (min-width: 1500px) {
+    margin: 0 1vw;
+  }
+  @media screen and (min-width: 1600px) {
+    margin: 0 -2vw;
+  }
+  @media screen and (min-width: 1700px) {
+    margin: 0 -5vw;
+  }
+  @media screen and (min-width: 1750px) {
+    margin: 0 -8vw;
+  }
+  @media screen and (min-width: 1850px) {
+    margin: 0 -12vw;
+  }
   &-left-button {
+    cursor: pointer;
     border: 0;
-    width: 25px;
-    height: 60px;
+    width: 27px;
+    height: 53px;
     position: fixed;
     left: 10.5vw;
-    top: 165px;
+    top: 175px;
     z-index: 1;
     opacity: 0.5;
     background-color: #FFFFFF;
     border-radius: 15px;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+    @media screen and (min-width: 1880px) {
+      left: 18vw;
+    }
+    @media screen and (max-width: 1880px) {
+      left: 18vw;
+    }
+    @media screen and (max-width: 1750px) {
+      left: 13vw;
+    }
+    @media screen and (max-width: 1600px) {
+      left: 10vw;
+    }
+    @media screen and (max-width: 1500px) {
+      left: 8vw;
+    }
+    @media screen and (max-width: 1400px) {
+      left: 4vw;
+    }
+    @media screen and (max-width: 1200px) {
+      left: 1vw;
+    }
   }
   &-right-button {
+    cursor: pointer;
     border: 0;
-    width: 25px;
-    height: 60px;
+    width: 27px;
+    height: 53px;
     position: fixed;
     right: 15.5vw;
-    top: 165px;
+    top: 175px;
     z-index: 1;
     opacity: 0.5;
     background-color: #FFFFFF;
     border-radius: 15px;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+    @media screen and (min-width: 1980px) {
+      right: 20vw;
+    }
+    @media screen and (max-width: 1980px) {
+      right: 20vw;
+    }
+    @media screen and (max-width: 1880px) {
+      right: 12vw;
+    }
+    @media screen and (max-width: 1800px) {
+      right: 15vw;
+    }
+    @media screen and (max-width: 1650px) {
+      right: 13vw;
+    }
+    @media screen and (max-width: 1600px) {
+      right: 10vw;
+    }
+    @media screen and (max-width: 1500px) {
+      right: 10vw;
+    }
+    @media screen and (max-width: 1400px) {
+      right: 4vw;
+    }
   }
 }

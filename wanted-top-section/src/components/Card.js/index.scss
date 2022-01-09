@@ -4,6 +4,7 @@
   position: relative;
   top: 23px;
   margin: 0 12px;
+  cursor: pointer;
   &-content {
     position: absolute;
     border-radius: 4px;
@@ -13,7 +14,7 @@
     height: 136px;
     background-color: white;
     z-index: 1;
-
+    cursor:auto;
   }
   &-title {
     width: 100%;

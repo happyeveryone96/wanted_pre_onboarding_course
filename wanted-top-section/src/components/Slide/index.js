@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './index.scss';
 import Card from '../Card.js'
 import { makeStyles } from "@material-ui/core";
@@ -22,7 +22,6 @@ function Slide() {
         setTransitionTime(transitionTime - 1);
       },500);
     } 
-
   }
 
   const rightBtn = () => {
@@ -50,6 +49,55 @@ function Slide() {
     }
   }))
   const classes = useStyles();
+
+  // let initialX = null;
+
+  // function initTouch(e) {
+  //   initialX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
+  // };
+
+  // function swipeDirection(e) {
+  //   if (initialX !== null) {
+  //     const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
+
+  //     let diffX = initialX - currentX;
+  //     if (transitionTime === 0) {
+  //       setTransitionTime(transitionTime + 1);
+  //     }
+  //     if (0 < diffX && diffX !== 0) {
+  //       setCardSpot(cardSpot - 988.59);
+  //       setCardNum(cardNum + 1);
+  //       if (cardNum === 10) {
+  //         setCardNum(cardNum - 10);
+  //         setCardSpot(cardSpot + 9885.9);
+  //         setTransitionTime(transitionTime - 1);
+  //       } 
+  //     } else if (0 > diffX && diffX !== 0){
+  //       setCardSpot(cardSpot + 988.59);
+  //       setCardNum(cardNum - 1);
+  //       if (cardNum === 0) {
+  //         setCardNum(cardNum + 10);
+  //         setCardSpot(cardSpot - 9885.9);
+  //         setTransitionTime(transitionTime - 1);
+  //       } 
+  //     }
+  //     initialX = null;
+  //   }
+  // }
+  // const container = document.getElementById('container');
+
+  // container?.addEventListener("touchstart", initTouch);
+  // container?.addEventListener("touchmove", swipeDirection);
+  // container?.addEventListener("mousedown", (e) => {
+  //   initTouch(e);
+  //   container?.addEventListener("mousemove", swipeDirection)
+  // });
+  // container?.addEventListener("mouseup", () => {
+  //   document?.removeEventListener("mousemove", swipeDirection);
+  //   container.onmouseup = null;
+  // });
+
+
 
   return (
     <div>

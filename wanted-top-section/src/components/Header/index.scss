@@ -1,6 +1,9 @@
 .header {
   box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
   width: 100%;
+  @media screen and (max-width: 992px) {
+    height: 98px;
+  }
   &-main {
     display: flex;
     position: relative;
@@ -55,13 +58,13 @@
     @media screen and (max-width: 992px) {
       position: fixed;
       left: 30px;
-      top: 60px;
+      top: 50px;
       width: 430px;
     }
     @media screen and (max-width: 768px) {
       justify-content: left;
       position: fixed;
-      left: 0;
+      left: 10px;
       width: 150px;
     }
     &:hover {
@@ -80,13 +83,12 @@
     justify-content: space-between;
     @media screen and (max-width: 992px) {
       width: 60px;
-      top: 65px;
+      top: 60px;
       left: 370px;
     }
     @media screen and (max-width: 768px) {
       position: relative;
       width: 60px;
-      top: 70px;
       left: 45%;
     }
     &-item {

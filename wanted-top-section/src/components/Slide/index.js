@@ -10,11 +10,11 @@ function Slide() {
   const [cardNum, setCardNum] = useState(0);
   const [transitionTime, setTransitionTime] = useState(1);
   const leftBtn = () => {
-    setCardSpot(cardSpot - 988.59);
-    setCardNum(cardNum + 1);
     if (transitionTime === 0) {
       setTransitionTime(transitionTime + 1);
     }
+    setCardSpot(cardSpot - 988.59);
+    setCardNum(cardNum + 1);
     if (cardNum === 10) {
       setTimeout(function() {
         setCardNum(cardNum - 10);
@@ -25,11 +25,11 @@ function Slide() {
   }
 
   const rightBtn = () => {
-    setCardSpot(cardSpot + 988.59);
-    setCardNum(cardNum - 1);
     if (transitionTime === 0) {
       setTransitionTime(transitionTime + 1);
     }
+    setCardSpot(cardSpot + 988.59);
+    setCardNum(cardNum - 1);
     if (cardNum === 0) {
       setTimeout(function() {
         setCardNum(cardNum + 10);
@@ -49,6 +49,13 @@ function Slide() {
     }
   }))
   const classes = useStyles();
+  
+  let cardWidth;
+  if (window.innerWidth > 1200) {
+    cardWidth = 988.59
+  } else {
+    cardWidth = window.innerWidth * 0.85 - 0.4 + 24;
+  }
 
   let initialX = null;
 
@@ -65,21 +72,19 @@ function Slide() {
         setTransitionTime(transitionTime + 1);
       }
       if (0 < diffX && diffX !== 0) {
-        console.log(diffX);
-
-        setCardSpot(cardSpot - 988.59);
+        setCardSpot(cardSpot - cardWidth);
         setCardNum(cardNum + 1);
         if (cardNum === 10) {
           setCardNum(cardNum - 10);
-          setCardSpot(cardSpot + 9885.9);
+          setCardSpot(cardSpot + cardWidth * 10);
           setTransitionTime(transitionTime - 1);
         } 
       } else if (0 > diffX && diffX !== 0){
-        setCardSpot(cardSpot + 988.59);
+        setCardSpot(cardSpot + cardWidth);
         setCardNum(cardNum - 1);
         if (cardNum === 0) {
           setCardNum(cardNum + 10);
-          setCardSpot(cardSpot - 9885.9);
+          setCardSpot(cardSpot - cardWidth * 10);
           setTransitionTime(transitionTime - 1);
         } 
       }
@@ -87,7 +92,7 @@ function Slide() {
     }
   }
   const container = document.getElementById('container');
-  console.log(window.innerWidth);
+
   container?.addEventListener("touchstart", initTouch);
   container?.addEventListener("touchmove", swipeDirection);
 
@@ -196,7 +201,6 @@ function Slide() {
         link='https://www.youtube.com/watch?v=VLiACiB2lXw&feature=youtu.be'
         cardNum={cardNum}
         index={12}/>
-        
     </div>
     <div>
       <button className='slide-left-button' onClick={()=>leftBtn()}>
